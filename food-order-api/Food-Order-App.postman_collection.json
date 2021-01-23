@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "596e83bd-85f4-4861-9d83-4f583d21d454",
+		"_postman_id": "903002bb-d865-4346-b584-b3015724d485",
 		"name": "Food-Order-App",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -108,6 +108,135 @@
 							],
 							"path": [
 								"chef-registration"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FoodMenuApi",
+			"item": [
+				{
+					"name": "AddNewFoodMenu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"foodMenuName\":\"Chapathi meals\",\n    \"foodMenuPrice\":20.0,\n    \"description\":\"Awesome chapathi meals\",\n    \"ingredients\":\"Who knows, some ingredients\",\n    \"deliveryOptions\":[\"TAKE_AWAY\",\"HOME_DELIVERY\"],\n    \"paymentOptions\":[\"CASH\",\"IDEAL\"],\n    \"quantitiesAvailable\":25,\n    \"menuDate\":\"2020-12-27T16:59:19.156\",\n    \"menuCategory\":\"MAIN_COURSE\",\n    \"foodMenuStatus\":\"ACTIVE\",\n    \"chefId\":\"6009fd01b7ef841344e42f72\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/food-menu",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"food-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFoodMenu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/food-menu/600c5914390f7517209ba27b",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"food-menu",
+								"600c5914390f7517209ba27b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "UpdateFoodMenu",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"foodMenuId\":\"600c5914390f7517209ba27b\",\n    \"foodMenuName\":\"Chapathi meals updated\",\n    \"foodMenuPrice\":20.0,\n    \"description\":\"Awesome chapathi meals\",\n    \"ingredients\":\"Who knows, some ingredients\",\n    \"deliveryOptions\":[\"TAKE_AWAY\",\"HOME_DELIVERY\"],\n    \"paymentOptions\":[\"CASH\",\"IDEAL\"],\n    \"quantitiesAvailable\":25,\n    \"menuDate\":\"2020-12-27T16:59:19.156\",\n    \"menuCategory\":\"MAIN_COURSE\",\n    \"foodMenuStatus\":\"ACTIVE\",\n    \"chefId\":\"6009fd01b7ef841344e42f72\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{hostname}}/food-menu",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"food-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeleteFoodMenu",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/food-menu/600c5914390f7517209ba27b",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"food-menu",
+								"600c5914390f7517209ba27b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAllFoodMenu",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/food-menu",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"food-menu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetFoodMenuOnChefId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{hostname}}/food-menu/chef/6009fd01b7ef841344e42f72",
+							"host": [
+								"{{hostname}}"
+							],
+							"path": [
+								"food-menu",
+								"chef",
+								"6009fd01b7ef841344e42f72"
 							]
 						}
 					},
